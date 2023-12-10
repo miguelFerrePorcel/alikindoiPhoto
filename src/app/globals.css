@@ -1,0 +1,60 @@
+/* Este selector universal se aplica a todos los elementos en la página y establece el box-sizing en "border-box". Esto significa que el ancho y el alto de un elemento incluyen el contenido y el relleno, pero no el margen ni el borde. También establece padding y margin en 0 para eliminar cualquier espacio adicional.*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Agrega un padding-top para ajustar el contenido debajo de la barra de navegación fija */
+main {
+  padding-top: 60px; /* Igual a la altura de la barra de navegación */
+}
+
+/*  Establecen reglas para el tamaño máximo y previenen el desplazamiento horizontal para evitar barras de desplazamiento horizontales. Además, se utiliza color-scheme para definir el esquema de colores, en este caso, "dark".*/
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color-scheme: dark;
+}
+
+/* Establece el color de los enlaces (a) para que sea el mismo que el color de texto normal y elimina la decoración de los enlaces (text-decoration: none), lo que significa que los enlaces no subrayarán ni mostrarán otras decoraciones visuales.*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*  */
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Mobile */
+
+/* Para pantallas con un ancho máximo de 700px, se aplica un estilo a elementos con la clase .container. 
+Estos elementos tendrán un margen inferior de 200px y un ancho máximo de 700px. 
+Además, el texto se centrará en estos elementos.*/
+@media (max-width: 700px) {
+
+  .container {
+    margin-bottom: 200px;
+    max-width: 700px;
+    text-align: center;
+  }
+
+}
+
+/* Tablet and Smaller Desktop */
+
+/*Para pantallas con un ancho mínimo de 701px y un ancho máximo de 1120px, se aplican reglas para elementos con la clase   .container. Los elementos tendrán un margen inferior de 120px y un ancho máximo de 1120px. También se establece un ancho mínimo de 701px para estos elementos y el texto se centrará.*/
+@media (min-width: 701px) and (max-width: 1120px) {
+  .container {
+    margin-bottom: 120px;
+    max-width: 1120px;
+    min-width: 701px;
+    text-align: center;
+  }
+}

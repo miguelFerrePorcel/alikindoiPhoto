@@ -1,0 +1,257 @@
+/* Estilo el contenedor principal. Se aplica un margen superior, una altura y un ancho .*/
+.container {
+    margin-top: 5rem;
+    height: calc(100vh - 60px);
+    width: 100%;
+    margin-bottom: 5rem; /* Espacio para el footer */
+}
+
+/* Estilo para un contenedor interno que se utiliza para centrar y alinear verticalmente el contenido. Se establece un ancho, se centra horizontalmente y se configura para que los elementos se muestren en una columna.*/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para encabezados de nivel 2 dentro del contenedor .wrapper. 
+Se configura un tamaño de fuente, color, y un espaciado de letra.*/
+.wrapper>h2 {
+    font-size: 32px;
+    background-color: #121212;
+    color:white;
+    margin-top: 20px;
+}
+
+/* Estilo para formularios dentro del contenedor .wrapper. 
+Se aplica un margen superior, relleno, un borde sólido de color y un radio de borde. 
+Los elementos dentro del formulario se centran tanto horizontal como verticalmente y se agrega un espacio vertical entre ellos.*/
+.wrapper>form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 3px solid #848383;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilo para campos de entrada de texto y áreas de texto dentro del formulario. 
+Se quita el contorno, el borde, se agrega un borde inferior sólido de color, se establece un relleno, se desactiva la capacidad de redimensionar y se aumenta el tamaño de fuente.*/
+.wrapper>form>input,
+.wrapper>form>textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #848383;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    resize: none;
+    font-size: larger;
+    box-sizing: border-box;
+}
+
+/* Estilo para los campos de entrada de texto y áreas de texto cuando están enfocados. 
+Se agrega una sombra de caja y se cambia el fondo y color de texto.*/
+.wrapper>form>input:focus,
+.wrapper>form>textarea:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color:white;
+    color: black;
+}
+
+/* Estilo para los campos de entrada de texto y áreas de texto cuando se pasa el cursor sobre ellos. 
+Se agrega una sombra de caja y se cambia el fondo.*/
+.wrapper>form>input:hover,
+.wrapper>form>textarea:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Estilos para mejorar el contraste de las opciones del select */
+.wrapper > form > .category option {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+}
+
+/* Establece estilos cuando el puntero del ratón se sitúa sobre los elementos select.*/
+.wrapper>form>select:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/*  Establece estilos cuando los elementos select están enfocados.*/
+.wrapper>form>select:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color:white;
+    color: black;
+}
+
+/* Estilo para los campos de entrada (input) dentro del contenedor .additionalFields:
+Elimina el contorno y el borde predeterminado de los campos de entrada.
+Agrega un borde inferior sólido de color.
+Aplica un relleno alrededor del campo de entrada.
+Ajusta el ancho del campo de entrada.
+Deshabilita la capacidad de redimensionar el campo de entrada.
+Establece el tamaño de fuente en larger.
+Ajusta el modelo de caja para incluir el borde y el relleno.*/
+.additionalFields input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #848383;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    resize: none;
+    font-size: larger;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+/* Estilos adicionales cuando el campo de entrada está enfocado (:focus):
+Agrega una sombra alrededor del campo de entrada cuando está enfocado.
+Cambia el color de fondo a aliceblue.
+Cambia el color del texto a negro.*/
+.additionalFields input:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Estilos adicionales cuando el cursor está sobre el campo de entrada (:hover):
+Agrega una sombra alrededor del campo de entrada cuando el cursor está sobre él.*/
+.additionalFields input:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Estilo para el elemento select dentro del contenedor .category:
+Elimina el contorno y el borde predeterminado del elemento select.
+Agrega un borde inferior de color .
+Aplica un relleno alrededor del elemento select.
+Ajusta el ancho del elemento select.
+Deshabilita la capacidad de redimensionar el elemento select.
+Establece el tamaño de fuente.
+Ajusta el modelo de caja para incluir el borde y el relleno.
+Establece el color del texto.*/
+.category>select {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #848383;
+    padding: 0.8rem;
+    width: calc(100% - 1rem);
+    resize: none;
+    font-size: larger;
+    box-sizing: border-box;
+    color:#848383;
+    margin-top: 1rem;
+}
+
+/*Estilos adicionales cuando el elemento select está enfocado (:focus):
+Agrega una sombra alrededor del elemento select cuando está enfocado.
+Cambia el color de fondo.
+Cambia el color del texto.*/
+.category>select:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Estilos adicionales cuando el cursor está sobre el elemento select (:hover):
+Agrega una sombra alrededor del elemento select cuando el cursor está sobre él.*/
+.category>select:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Define estilos para las etiquetas dentro del formulario, incluyendo su ancho, alineación y tamaño de fuente.*/
+.wrapper>form>label[for="image"] {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 1.25rem;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+/* Estilos apra alinear en el medio verticalmente */
+.wrapper>form>[for="image"]> * {
+    vertical-align: middle;
+}
+
+/* Establece estilos cuando el puntero del ratón se sitúa sobre las etiquetas.*/
+.wrapper>form>[for="image"]:hover {
+    color: rgb(62, 119, 252);
+    transform: scale(1.2);
+}
+
+/* Estilo para el campo de entrada de archivos 
+oculta el campo de entrada de archivos */
+.wrapper>form>.fileInput {
+    display: none;
+}
+
+/* Estilo para párrafos dentro del formulario. 
+Se establece color de texto.*/
+.wrapper>form>p {
+    line-height: 1.5;
+    color:aqua;
+    background-color: #121212;
+    text-align: center;
+}
+
+/* Estilo para el botón "Crear post". 
+Se quita el contorno, se establece un relleno y borde, se define el color defondo y del texto. 
+El cursor cambia a "pointer" y se aplica una transición suave y un espaciado de letra.*/
+.createBlog {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid #128e04;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #121212;
+    color: #e6eae6;
+    cursor: pointer;
+    transition: transform 1s;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo para el botón "Crear post" cuando se pasa el cursor sobre él. 
+Se cambia el color del borde y el fondo, el color del texto y el botón se escala.*/
+.createBlog:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para el botón de cancelación. 
+Se quita el contorno, se establece un relleno y borde, se define el color defondo y del texto. 
+El cursor cambia a "pointer" y se aplica una transición suave y un espaciado de letra.*/
+.cancel {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #121212;
+    color: #e6eae6;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: transform 1s;
+}
+
+/* Estilo para el botón de cancelación cuando se pasa el cursor sobre él. 
+El botón se escala.*/
+.cancel:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para un mensaje "Access Denied". 
+Establece el ancho, se alinea al centro y se configura un tamaño y estilo de fuente.*/
+.accessDenied {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 32px;
+    font-weight: bold;
+}

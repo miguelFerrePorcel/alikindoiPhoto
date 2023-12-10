@@ -1,0 +1,216 @@
+/* Establece el estilo del contenedor principal de la barra de navegación. 
+Es una barra fija en la parte superior de la página, con un fondo oscuro y una sombra suave. Contiene elementos centrados tanto en horizontal como en vertical.
+Define una animación "enhance-header" que se ejecutará de manera lineal y en ambas direcciones (ida y vuelta). 
+La animación "enhance-header" debe estar definida en otra parte del código CSS con sus respectivas reglas y keyframes.
+Especifica la línea de tiempo o el contexto en el que se ejecutará la animación. En este caso está asociada con el desplazamiento (scroll) del elemento raíz (root). 
+La animación se aplicará en un rango que va desde 0 hasta 100 píxeles.
+La propiedad z-index controla el apilamiento o superposición de elementos en capas en una página web. Un valor más alto de z-index puede hacer que un elemento se superponga a otros elementos con un valor de z-index inferior si están en la misma posición o se superponen en la página.*/
+.container {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: enhance-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+    z-index: 1;
+}
+
+/*  Los keyframes en CSS son utilizados para especificar los estilos que un elemento debe tener en diferentes etapas de una animación.
+En este caso, la animación "enhance-header" va desde su estado inicial (from o 0%) hasta el estado final (to o 100%). En el estado final, se han definido los siguientes estilos:
+Establece el color de fondo con una cierta opacidad utilizando el modelo de color RGBA.
+Aplica un efecto de desenfoque a los elementos detrás del elemento en el que se está aplicando esta animación.
+ */
+@keyframes enhance-header {
+    to {
+        background-color: rgba(4, 4, 59, 0.85);
+        backdrop-filter: blur(5px);      
+    }
+    
+}
+
+/* Se utiliza para el contenedor secundario que contiene los elementos de la barra de navegación. 
+Alinea y espacia los elementos de navegación de manera uniforme.*/
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-evenly;
+    position: relative; 
+}
+
+/*  Estiliza el texto en la parte izquierda de la barra de navegación. 
+Establece tamaño y color de texto*/
+.left {
+    margin-top: 0.3rem;
+    font-size: 25px;
+    color: rgb(62, 119, 252);
+    transition: 1.5s;
+}
+
+/* 
+Al hacer hover (pasar el mouse sobre él), el texto aumenta de tamaño.*/
+.left:hover {
+transform: scale(1.1);
+}
+
+/*  Estiliza el lado derecho de la barra de navegación. 
+Los elementos se alinean verticalmente y tienen un pequeño espacio entre ellos.*/
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/*  Estiliza la imagen de perfil
+ La imagen se ajusta al contenedor. 
+ Establece un borde redondeado y transforma el cursor cuando pase sobre la imagen. Esto indica a los usuarios que la imagen es interactiva y se puede hacer clic en ella*/
+.avatar {
+    object-fit: cover;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+/* Aumenta el tamaño de la imagen al pasar el cursor sobre ella*/
+.avatar:hover {
+    transform: scale(1.2);
+}
+
+/* Estos son los estilos para los botones y enlaces de navegación. 
+Establecen el tamaño, los colores, los bordes redondeados y aplican una escala.*/
+.profile {
+    padding: 0.4rem 1.5rem;
+    border: 2px solid rgb(62, 119, 252);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: transform 1s;
+}
+
+/* aplican una escala al pasar el cursor sobre los enlaces.*/
+.profile:hover {
+    transform: scale(1.2);
+}
+
+/* Estos estilos CSS se aplican a un elemento con la clase .logout.
+Define el espaciado dentro del elemento, un borde, redondeado, color, tamaño y estilo de texto y color de fondo*/
+.logout {
+    padding: 0.4rem 1.6rem;
+    border: 2px solid #f20c08;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #121212;
+    transition: transform 1s;
+}
+
+/* Aumenta el tamaño del elemento al situar el cursor sobre él*/
+.logout:hover {
+    transform: scale(1.2);
+}
+
+/* Se aplican a un elemento con la clase .create.
+ Define el espaciado dentro del elemento. 
+ Elimina cualquier borde que pueda rodear el elemento. 
+ Establece el color del texto , borde redondeado, estilo y tamaño del texto y color de fondo.*/
+.create {
+    padding: 0.4rem 1.4rem;
+    border: 2px solid rgb(4, 173, 21);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: transform 1s;
+}
+
+/* Aumenta el tamaño del elemento al situar el cursor sobre él*/
+.create:hover {
+    transform: scale(1.2);
+}
+
+/* se aplican a un elemento con la clase .login.
+Los elementos secundarios dentro del elemento se disponen en una fila de manera predeterminada.
+Elimina cualquier contorno alrededor del elemento.
+Elimina cualquier borde que pueda rodear el elemento. 
+Define el espaciado dentro del elemento, tamaño de texto, color de fondo y de texto, borde redondeado.
+Cambia el cursor del mouse a una mano cuando se pasa sobre el botón, indicando que es interactivo.*/
+.login {
+    display: inline-block; /* Cambia la visualización a en línea para los elementos */
+    margin-left: 0.5rem; /* Añade un margen izquierdo entre los elementos */
+    outline: none;
+    border: 2px solid green;
+    padding: 0.4rem 0.5rem;
+    font-size: 17px;
+    color:white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+/* Aumenta el tamaño del elemento y cambia el color de fondoal situar el cursor sobre él*/
+.login:hover {
+    transform: scale(1.2);
+}
+
+/* Se aplican a un elemento con la clase .register.
+Los elementos secundarios dentro del elemento se disponen en una fila de manera predeterminada. 
+Define el espaciado dentro del elemento, margen izquierdo, tamaño de texto, color de fondo y de texto, borde redondeado.
+Cambia el cursor del mouse a una mano cuando se pasa sobre el botón, indicando que es interactivo.*/
+.register {
+    display: inline-block; /* Cambia la visualización a en línea para los elementos */
+    margin-left: 0.5rem; /* Añade un margen izquierdo entre los elementos */
+    padding: 0.4rem 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 17px;
+    color: #fff;
+    outline: none;
+    border: 2px solid rgb(62, 119, 252);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+/* Aumenta el tamaño del elemento y cambia el color de fondoal situar el cursor sobre él*/
+.register:hover {
+    transform: scale(1.2);
+}
+
+/* Se aplican a un elemento con la clase .dropdown que se utiliza para crear un menú desplegable o una lista de opciones. 
+Establece el color de fondo del menú desplegable. 
+Agrega un espaciado interno dalrededor del contenido del menú desplegable. 
+Establece la posición del menú desplegable como absoluta en relación con el elemento primario más cercano con una posición relativa o absoluta. 
+Los elementos secundarios dentro del menú se colocan en una columna de manera predeterminada.
+Centra verticalmente los elementos secundarios dentro del menú desplegable. Los elementos se alinearán verticalmente en el centro del menú.
+Agrega un espacio vertical entre los elementos secundarios del menú. 
+Establece la distancia entre la parte superior del menú desplegable y el borde superior de su elemento primario más cercano.
+Establece la distancia entre el lado derecho del menú desplegable y el borde derecho de su elemento primario más cercano.*/
+.dropdown {
+    background-color: rgba(7, 7, 7, 0.8);
+    padding: 1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    right: 27%;
+}
+
+/* Cambia el cursor del mouse a una mano cuando se pasa sobre el botón, indicando que es interactivo.*/
+.dropdown>* {
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .login,
+    .register {
+        display: inline-block; /* Cambia la visualización a en línea para los elementos */
+        margin-left: 0.1rem; /* Ajusta el margen izquierdo para dispositivos móviles */
+    }
+}

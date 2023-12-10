@@ -1,0 +1,118 @@
+/* Este estilo define las propiedades del contenedor principal. 
+Establece un margen superior, un alto y un ancho.*/
+.container {
+    margin-top: 10rem;
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+/*  Estos estilos se aplican al contenedor secundario que contiene el formulario. 
+Se centra en la pantalla con un ancho del 100%, se organiza en una columna vertical y se alinea al centro */
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estos estilos se aplican al encabezado del formulario y establecen un tamaño de fuente, color de texto y un espaciado entre letras.*/
+.wrapper>h2 {
+    font-size: 32px;
+    background-color: #121212;
+    color:white;
+    letter-spacing: 1px;
+}
+
+/* Estos estilos se aplican al formulario. 
+Establecen un margen superior, un relleno, un bordesólido de color, un radio de borde y organizan el contenido en una columna vertical con un espacio entre elementos.*/
+.wrapper>form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 3px solid #848383;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estos estilos se aplican a los campos de entrada de texto del formulario. 
+Establecen un borde inferior de 1 píxel sólido de color, un relleno y un tamaño de fuente.*/
+.wrapper>form>input {
+    border-bottom: 1px solid #848383;
+    padding: 0.5rem;
+    font-size: larger;
+}
+
+/* Cuando un campo de entrada de texto obtiene el enfoque, estos estilos eliminan el borde, establecen una sombra de caja y cambian los colores de fondo y texto.*/
+.wrapper>form>input:focus {
+    outline: none;
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Cuando el usuario coloca el cursor sobre un campo de entrada de texto, estos estilos aplican una sombra de caja.*/
+.wrapper>form>input:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Estos estilos se aplican al botón de envío del formulario. 
+Establecen un margen superior, un fondo de color, un texto en negrita, y un tamaño de fuente. También agregan una transición suave y aumentan el tamaño y cambian el color de fondo cuando el usuario pasa el cursor sobre el botón.*/
+.submitButton {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid #128e04;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #121212;
+    color:white;
+    cursor: pointer;
+    transition: transform 1s;
+    letter-spacing: 0.5px;
+}
+
+/* Estos estilos CSS se aplican cuando el usuario pasa el cursor sobre el botón con la clase .submitButton.
+Establece el color del borde del botón, el color de fondo del botón, el color del texto dentro del botón y aplica una transformación de escala.*/
+.submitButton:hover {
+    transform: scale(1.1);
+}
+
+/* Estos estilos se aplican al botón de iniciar sesión o registrarse. 
+Establecen un fondo transparente, un texto de mayor tamaño, margen superior, un cursor de tipo puntero alinea al centro el texto y establece una transición suave.*/
+.loginNow {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: larger;
+    margin-top: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 1s;
+}
+
+/* Estos se aplican cuando el usuario pasa el cursor sobre el elemento con la clase .loginNow
+ Modifica el color del texto y aplica una transformación de escala al elemento*/
+.loginNow:hover {
+    color: #5f8efb;
+    transform: scale(1.2);
+}
+
+/* Estos estilos se aplican al botónde cancelar.
+ Establecen un fondo de color y un espaciado*/
+.cancel {
+    border: 2px solid #ff0000;
+    background-color: #121212;
+    color: white;
+    padding: 0.5rem;
+    transition: transform 1s;
+    text-align: center;
+}
+
+/* Estos se aplican cuando el usuario pasa el cursor sobre el elemento con la clase .cancel
+ Aplica una transformación de escala al elemento.*/
+.cancel:hover {
+    transform: scale(1.1);
+}

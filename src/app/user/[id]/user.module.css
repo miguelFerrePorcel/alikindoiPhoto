@@ -1,0 +1,225 @@
+/* Establece el contenedor principal de la página*/
+.container {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #121212;
+}
+
+/* El contenedor que envuelve todo el contenido de la página.
+Establece alto y ancho
+Alinea el contenido al centro y en columna.
+Establece un margen superior para separar el contenido de la parte superior de la ventana
+Crea un borde redondeado y un relleno.*/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid #767474;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+/* Establece el estilo para las imágenes dentro del contenedor .wrapper.
+Limita la altura y el ancho de la imagen..
+Establece un margen superior para separar la imagen de otros elementos.
+Le da a la imagen un borde redondeado.*/
+.wrapper > img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
+    margin-top: 2rem;
+    align-self: center;
+    object-fit: contain;
+    border-radius: 20%;
+    transition: 1s;
+}
+
+/* Al pasar el mouse sobre la imagen, cambia el cursor a un puntero*/
+.wrapper > img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* Establece el estilo para el modal de imagen ampliada.
+Hace que el modal cubra toda la ventana.
+Establece el fondo del modal y centra el contenido vertical y horizontalmente.*/
+.imgScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Establece el estilo para las filas de contenido dentro del contenedor .wrapper.
+Hace que los elementos de la fila estén alineados horizontalmente y tengan un margen en los lados.*/
+.wrapper > .row {
+    /* margin-top: 1rem; */
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* *Establece el estilo para los elementos span dentro de las filas.
+Define el estilo del texto, peso de la fuente y tamaño.*/
+.row > span {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Establece el estilo para el segundo span dentro de las filas.
+Define el estilo del texto, peso de la fuente y color.*/
+.row > span > span {
+    font-weight: 500;
+    color: #c7c5c5;
+    font-size: 16px;
+}
+
+.row > span > span:hover {
+    color: aquamarine;
+}
+
+/* Establece el estilo para los elementos que contienen el nombre de usuario y el correo electrónico.
+Hace que los elementos estén alineados verticalmente y tengan un espaciado.*/
+.username,
+.email,
+.web,
+.created {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #ffffff;
+}
+
+/* Establece el estilo para los elementos que contienen los botones de edición y eliminación.
+Alinea los elementos horizontalmente y establece un espaciado.*/
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Establece estilos de los elementos que contenga la clase bye*/
+.bye {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 40px;
+}
+
+/* Establece el tamaño de texto de los elementos que contenga la clase .home dentro de la clase .bye*/
+.bye>.home {
+    margin-top: 20px; /* Espacio entre "Hasta pronto" y el icono de home */
+    font-size: 40px;
+    transition: transform 1s;
+}
+
+
+
+/* Establece el tamaño de texto de los elementos que contenga la clase home*/
+.home {
+    font-size: 40px;
+    transition: transform 1s;
+}
+
+/* Establece el color de texto t transforma la escala de los elementos que contenga la clase home*/
+.home:hover {
+    color: aquamarine;
+    transform: scale(1.2);
+}
+
+/* Establece el estilo para el botón de edición.
+Elimina el contorno predeterminado que aparece al hacer clic en el botón.
+Establece ancho y color del borde(no tendrá un borde visible).
+Establece el color de fondo y del texto del botón.
+Agrega un relleno en todos los lados del botón.
+Cambia la presentación del botón a "flex", lo que permite la alineación y el espaciado controlado de los elementos hijos.
+Establece un espaciado entre los elementos hijos del botón.
+Alinea verticalmente los elementos hijos en el centro del botón.
+Aplica un radio de borde.
+Cambia el cursor cuando pasa sobre el botón, indicando que es interactivo y se puede hacer clic.
+Establece el tamaño y el peso de fuente del texto del botón.
+Agrega una transición suave al pasar el mouse sobre el botón.*/
+.editButton {
+    outline: none;
+    border: 2px solid #3eda22;
+    /* background-color: #3eda22; */
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 1s;
+}
+
+/* Cambia el color de fondo, el color del borde y del texto del botón cuando se coloca el cursor sobre él.
+Aplica una transformación de escala al botón*/
+.editButton:hover {
+    transform: scale(1.2);
+}
+
+/* Establece el estilo para el botón de edición.
+Elimina el contorno predeterminado que aparece al hacer clic en el botón.
+Establece ancho y color del borde (no tendrá un borde visible).
+Establece el color de fondo y del texto del botón.
+Agrega un relleno en todos los lados del botón.
+Cambia la presentación del botón a "flex", lo que permite la alineación y el espaciado controlado de los elementos hijos.
+Establece un espaciado entre los elementos hijos del botón.
+Alinea verticalmente los elementos hijos en el centro del botón.
+Aplica un radio de borde.
+Cambia el cursor cuando pasa sobre el botón, indicando que es interactivo y se puede hacer clic.
+Establece el tamaño y el peso de fuente del texto del botón.
+Agrega una transición suave al pasar el mouse sobre el botón.*/
+.deleteButton {
+    outline: none;
+    border: 2px solid rgb(255, 0, 0);
+    background-color: #121212;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 1s;
+}
+
+/* Cambia el color de fondo, el color del borde y del texto del botón cuando se coloca el cursor sobre él.
+Aplica una transformación de escala al botón*/
+.deleteButton:hover {
+    transform: scale(1.2);
+}
+
+/* alinea los elementos en una fila y centrados.
+Establece un espaciado y Cambia el cursor del mouse cuando se coloca sobre el elemento*/
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* Aplica una transformación de escala al elemento y cambia el color del texto del elemento.*/
+.right:hover {
+    transform: scale(1.2);
+    color: aquamarine;
+}

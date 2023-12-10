@@ -1,0 +1,224 @@
+/* Este estilo se aplica al contenedor principal de la página.
+Establece un espacio en la parte superior del contenedor.
+Define la altura y el ancho del contenedor*/
+.container {
+    margin-top: 5rem;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #121212;
+}
+
+/* Estos estilos se aplican a un contenedor secundario dentro del contenedor principal.
+Establece el ancho del contenedor.
+Define un margen en la parte superior e inferior del contenedor, centrando el contenido verticalmente.
+Configura un diseño flexible, apilando elementos verticalmente y alineándolos en el centro.*/
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Este estilo se aplica a elementos <h2> dentro del contenedor .wrapper.
+Establece el tamaño, el color y espaciado entre letras del texto.*/
+.wrapper>h2 {
+    font-size: 32px;
+    color:white;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+
+/* Estos estilos se aplican al formulario dentro del contenedor .wrapper.
+Crea un espacio en la parte superior del formulario.
+Agrega relleno interior alrededor del formulario.
+Define un borde con color y un radio de borde.
+Configura un diseño flexible, apilando elementos verticalmente y centrando su contenido.
+Establece un espaciado entre elementos dentro del formulario.*/
+.wrapper>form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 3px solid #848383;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estos estilos se aplican a campos de entrada y áreas de texto dentro del formulario.
+Eliminan los bordes predeterminados y el contorno alrededor de los elementos de entrada.
+Define un borde inferior de color.
+Establece un relleno alrededor de los elementos.
+Evita que las áreas de texto se puedan redimensionar por el usuario.
+Establece el tamaño de fuente.*/
+.wrapper>form>input,
+.wrapper>form>textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #848383;
+    padding: 0.5rem;
+    resize: none;
+    font-size: larger;
+}
+
+/* Estos estilos se aplican cuando los campos de entrada y áreas de texto están enfocados (seleccionados por el usuario).
+Agrega una sombra alrededor del elemento enfocado.
+Cambia el fondo y el color del texto.*/
+.wrapper>form>input:focus,
+.wrapper>form>textarea:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Estos estilos se aplican cuando el cursor del mouse se coloca sobre los campos de entrada y áreas de texto.
+Agrega una sombra alrededor del elemento cuando se coloca el cursor.*/
+.wrapper>form>input:hover,
+.wrapper>form>textarea:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Estos estilos se aplican a elementos <select> en el formulario.
+Elimina el contorno predeterminado.
+Define un borde inferior de color.
+Establece un relleno.
+Evita que las áreas de texto se puedan redimensionar por el usuario.
+Establece el tamaño del texto.
+Define un ancho y agrega un radio de borde*/
+.wrapper>form>select {
+    outline: none;
+    border-bottom: 1px solid #666;
+    padding: 0.4rem;
+    resize: none;
+    font-size: larger;
+    width: 260px;
+    border-radius: 8px;
+}
+
+/* Estos estilos se aplican cuando se coloca el cursor sobre el elemento <select>.
+Agrega una sombra.*/
+.wrapper>form>select:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Estos estilos se aplican cuando el elemento <select> está enfocado.
+Agrega una sombra, cambia el fondo y el color del texto.*/
+.wrapper>form>select:focus {
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/*  Estos estilos se aplican a etiquetas en el formulario.
+Define un ancho.
+Configura las etiquetas como elementos flexibles con contenido centrado y espacio entre el texto y los elementos circundantes.
+Establece el tamaño de fuente y el grosor del texto.
+Cambia el cursor a una mano cuando se coloca sobre la etiqueta.*/
+.wrapper>form>label {
+    width: 175px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: transform 1s;
+}
+
+/* Estos estilos se aplican cuando se coloca el cursor sobre las etiquetas en el formulario.
+Cambia el color del texto y aplica una transformación de escala para agrandar ligeramente la etiqueta.*/
+.wrapper>form>label:hover {
+    color: #4866f7;
+    transform: scale(1.2);
+}
+
+/* Define estilos para las etiquetas dentro del formulario, incluyendo su ancho, alineación y tamaño de fuente.*/
+.wrapper>form>label[for="image"] {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 1.25rem;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.wrapper>form>[for="image"]> * {
+    vertical-align: middle;
+}
+
+/* Establece estilos cuando el puntero del ratón se sitúa sobre las etiquetas.*/
+.wrapper>form>[for="image"]:hover {
+    color: rgb(62, 119, 252);
+    transform: scale(1.2);
+}
+
+/* Estos estilos se aplican a elementos de párrafo (<p>) en el formulario.
+Define el color del texto*/
+.wrapper>form>p {
+    color:aqua;
+    text-align: center;
+}
+
+/* Estos estilos se aplican a un botón con la clase .createBlog.
+Configura el aspecto (borde y espaciado) del botón.
+Establece el tamaño de fuente y el grosor del texto.
+Define los colores de fondo y texto.
+Cambia el cursor a una mano cuando se coloca sobre el botón.
+Agrega una transición suave para cambios de estilo y establece el espaciado entre caracteres.*/
+.edit {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid #128e04;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #121212;
+    color: #e6eae6;
+    cursor: pointer;
+    transition: 150ms;
+    letter-spacing: 0.5px;
+    transition: transform 1s;
+}
+
+/*  Estos estilos se aplican cuando se coloca el cursor sobre el botón .edit.
+Cambia el color del borde, el fondo y el color del texto del botón.
+Aplica una transformación de escala para agrandar el botón.*/
+.edit:hover {
+    transform: scale(1.1);
+}
+
+/* Estos estilos se aplican a un mensaje de acceso denegado.
+Establece el ancho.
+Centra el texto horizontalmente.
+Crea un margen en la parte superior del mensaje.
+Define el tamaño de fuente y el grosor del texto.*/
+.accessDenied {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Estos estilos se aplican a un botón con la clase .cancel.
+Define el color de fondo y el relleno interior del botón.
+Cambia el cursor a una mano cuando se coloca sobre el botón.*/
+.cancel {
+    border: 2px solid #ff0000;
+    background-color: #121212;
+    color: white;
+    padding: 0.5rem;
+    transition: transform 1s;
+    text-align: center;
+}
+
+/* Estos estilos se aplican cuando se coloca el cursor sobre el botón .cancel.
+Aplica una transformación de escala para agrandar el botón.*/
+.cancel:hover {
+    transform: scale(1.1);
+}

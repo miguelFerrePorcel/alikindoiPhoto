@@ -1,0 +1,181 @@
+/*  Este estilo controla el contenedor principal del formulario de registro. 
+Establece un margen en la parte superior, un alto en la ventana del navegador y un ancho.*/
+.container {
+    margin-top: 7rem;
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+/* Estos estilos se aplican al contenedor interno dentro del formulario. 
+Se establece un ancho, se centra horizontalmente en la página y se organiza en una columna. Además, los elementos dentro del contenedor se alinean verticalmente al centro*/
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Estos estilos se aplican a un encabezado (<h2>) dentro del contenedor .wrapper. 
+Establece un tamaño de fuente, un color de textoy agrega un espaciado entre letras.*/
+.wrapper > h2 {
+    font-size: 32px;
+    background-color: #121212;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/*  Estos estilos se aplican a un encabezado (<h3>) dentro del contenedor .wrapper. 
+Establece un tamaño de fuente, un color de textoy agrega un espaciado entre letras.*/
+.wrapper > h3 {
+    font-size: 18px;
+    background-color: #121212;
+    color: #cbc7c7;
+    margin-left: 1.2rem;
+}
+
+/* Establece estilos para un formulario dentro del contenedor .wrapper. Configura el margen superior, el relleno, el borde, el radio de borde y otros estilos de disposición.*/
+.wrapper > form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 3px solid #848383;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estos estilos se aplican a los campos de entrada de texto en el formulario.
+ Establecen un borde inferior sólido de color, establecen un relleno y usan un tamaño de fuente más grande */
+.wrapper > form > input,
+.wrapper > form > textarea {
+    border-bottom: 1px solid #848383;
+    padding: 0.5rem;
+    font-size: larger;
+}
+
+/*  Estos estilos se aplican a los campos de entrada de texto cuando están enfocados (seleccionados por el usuario). Eliminan el borde de enfoque predeterminado, agregan un sombreado y cambian el color de fondo y el color del texto.*/
+.wrapper > form > input:focus,
+.wrapper > form > textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 7px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Estos estilos se aplican a los campos de entrada de texto cuando el cursor del mouse pasa por encima. 
+Agregan un sombreado cuando se pasa el mouse para dar retroalimentación visual.*/
+.wrapper > form > input:hover,
+.wrapper > form > textarea:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/*  Estos estilos se aplican a las etiquetas asociadas a elementos del formulario. 
+Establecen un ancho, alinean elementos y texto horizontalmente, agregan un espacio entre elementos y establecen la fuente en negrita.*/
+.wrapper > form > label {
+    width: 175px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 1s;
+}
+/* Define estilos para las etiquetas dentro del formulario, incluyendo su ancho, alineación y tamaño de fuente.*/
+.wrapper > form > label[for="image"] {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 1.25rem;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.wrapper > form > [for="image"] > * {
+    vertical-align: middle;
+}
+
+/* Establece estilos cuando el puntero del ratón se sitúa sobre las etiquetas.*/
+.wrapper > form > [for="image"]:hover {
+    color: rgb(62, 119, 252);
+    transform: scale(1.2);
+}
+
+/* Estilo para párrafos dentro del formulario. 
+El texto se establece en color "aqua".*/
+.wrapper > form > p {
+    line-height: 1.5;
+    background-color: #121212;
+    color: aqua;
+    text-align: center;
+}
+
+/* Estos estilos se aplican a las etiquetas cuando el cursor del mouse pasa por encima. 
+Cambian el color del texto  */
+.wrapper > form > label:hover {
+    color: #4866f7;
+    transform: scale(1.2);
+}
+
+/* Estos estilos se aplican a los botones de envío en el formulario. 
+Aplican espaciado, agregan un borde solido, establecen tamaño y tipo (negrita) de letra, un fondo y color de texto y cambian el aspecto del botón cuando se pasa el mouse sobre él.*/
+.submitButton {
+    padding: 0.5rem 1rem;
+    border: 2px solid #128e04;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #121212;
+    color: #e6eae6;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: transform 1s;
+}
+
+/* Estos estilos se aplican al botón de envío cuando el cursor del mouse pasa por encima. 
+Cambian el color del borde, el fondo para indicar interactividad y transforma la escala del botón*/
+.submitButton:hover {
+    transform: scale(1.1);
+}
+
+/*  Estos estilos se aplican a los botones de cancelar en el formulario. */
+.cancel {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ff0000;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #121212;
+    color: #e6eae6;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: transform 1s; 
+}
+
+.cancel:hover {
+    transform: scale(1.1);
+}
+
+/* Estos estilos se aplican a un botón o enlace que permite a los usuarios registrados iniciar sesión. 
+Elimina el fondo y el borde, establecen tamaño del texto, un margen superior, cambian el aspecto del botón y del cursor cuando se pasa el mouse sobre él.*/
+.loginNow {
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    margin-top: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 1s;
+}
+
+/*  Estos estilos se aplican al botón o enlace "Tienes cuenta?" cuando el cursor del mouse pasa por encima. 
+Cambian el color del texto para indicar interactividad.*/
+.loginNow:hover {
+    color: #5f8efb;
+    transform: scale(1.2);
+}

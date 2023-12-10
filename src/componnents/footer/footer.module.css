@@ -1,0 +1,57 @@
+/* Se aplica al elemento footer.
+Establece ancho, altura, margen superior y color de fondo.*/
+.footer{
+    width: 100%;
+    height: 400px;
+    margin-top: 20rem;
+    background-color: rgb(15, 15, 15);
+}
+
+/* Se aplica a un contenedor dentro del pie de página. 
+Establece ancho, altura, margen y alinea los elementos al centro verticalmente*/
+.wrapper{
+    width: 57%;
+    height: 100%;
+    margin: 0 auto;    
+    align-items: center;
+}
+
+/* Se aplica a elementos que contienen texto o enlaces dentro del pie de página. 
+Establece la disposición de elementos en una columna (verticalmente) y espacio entre elementos*/
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* se aplica a elementos h2 dentro de elementos con clase .col. 
+Establece un margen inferior.*/
+.col > h2{
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Se aplica a elementos p dentro de elementos con clase .col. 
+Establece color de texto y tamaño de fuente.*/
+.col > p{
+    /* max-width: 425px; */
+    color: #d2cece;
+    font-size: 100%;
+    line-height: 2;
+}
+
+.email, .ig, .blog{
+    color: white;
+}
+
+/* Se aplica a enlaces con clase .link 
+Establece color de texto*/
+.link {
+    color:aquamarine;
+}
+
+/* Cambio de color de texto cuando se pasa el mouse por encima.*/
+.link:hover {
+    color: rgb(80, 166, 247);
+}
+

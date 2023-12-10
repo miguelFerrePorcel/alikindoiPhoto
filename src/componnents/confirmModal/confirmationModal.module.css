@@ -1,0 +1,107 @@
+/*  Define el estilo del contenedor modal. 
+Está posicionado de forma fija en la ventana (cubre toda la ventana) y utiliza flexbox para alinear elementos en columna. Esto centra el contenido vertical y horizontalmente. 
+El fondo del modal tiene un color de fondo semitransparente.*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items:center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilo aplicado a una fila dentro del modal. Utiliza flexbox para centrar elementos tanto horizontal como verticalmente y agrega un margen inferior para separar las filas.*/
+.confirmationRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Estilo para el mensaje de confirmación. 
+  Establece el tamaño de fuente, añade márgenes izquierdo y derecho para separar el mensaje del ícono y aplica un margen superior para desplazar el mensaje hacia abajo.*/
+.confirmationMessage {
+    line-height: 1.5;
+    font-size: 150%;
+    margin-left: 20px; 
+    margin-right: 30px;
+    margin-top: 8rem;
+    font-weight: bold;
+}
+
+/* Estilo para el ícono de confirmación. 
+Define un color de fondo y un tamaño de fuente grande. Agrega relleno al ícono y aplica márgenes izquierdo y superior para separar el ícono del mensaje.*/
+.confirmationIcon {
+    background-color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding: 10px; 
+    margin-left: 20px;
+    margin-top: 8rem;
+}
+
+/* Estilo para el contenedor de botones de confirmación. 
+Utiliza flexbox para alinear los botones horizontalmente con un espacio entre ellos y aplica un margen superior.*/
+.confirmationButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+/* Estilo para el botón de eliminación. 
+Define un color de fondo, un relleno, un borde redondeado y cambia el cursor a "pointer". 
+Ajusta el tamaño de fuente y utiliza flexbox para centrar el contenido del botón.*/
+.deleteButton {
+    background-color: #121212;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+/* Cuando el botón se encuentra en estado "hover"  realiza una animación de escala.*/
+.deleteButton:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo para el botón de cancelación. 
+Define un color de fondo, un relleno, un borde redondeado y cambia el cursor a "pointer". 
+Ajusta el tamaño y estilo de fuente y utiliza flexbox para centrar el contenido del botón.*/
+.cancelButton {
+    background-color: #121212;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #3eda22;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+/* Cuando el botón se encuentra en estado "hover" cambia el color de fondo, el color del borde y aumenta su tamaño.*/
+.cancelButton:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo para los iconos dentro de los botones de confirmación. 
+Aumenta el tamaño de fuente y agrega márgenes a la derecha e izquierda para separar los iconos del texto del botón.*/
+.confirmationButtons svg {
+    font-size: 50px; 
+    margin-right: 6px;
+    margin-left: 6px;
+}

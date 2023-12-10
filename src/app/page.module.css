@@ -1,0 +1,211 @@
+/* Estilos para el contenedor principal de la página.
+Establece una altura mínima y ancho.
+Los elementos se apilan en una columna, se distribuyen de manera uniforme se alinean en el centro verticalmente.
+Establece un espacio alrededor del contenido del contenedor y el color de fondo.
+.*/
+.container {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Agrega los estilos para el contenedor del spinner y el texto de carga. 
+ Convierte el contenedor en un contenedor flexible.
+ Alinea los elementos en el centro vertical del contenedor. 
+ Centra los elementos horizontalmente dentro del contenedor.
+ Establece la altura del contenedor al 100% de la altura de la ventana*/
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Agrega los estilos para el spinner de carga de blogs. 
+Agrega margen superior para separar el spinner.
+Establece un borde transparente alrededor del spinner.
+Establece el borde superior de color sólido.
+ Hace que el borde del spinner sea circular.
+ Establece el ancho y la altura del spinner.
+ Aplica la animación llamada 'spin' con una duración de 1 segundo, temporización lineal y repetición infinita.*/
+.spinner {    
+    margin-top: 1rem;
+    margin-left: -0.25rem;
+    border: 4px solid transparent;
+    border-top: 4px solid rgba(62, 119, 252, 1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Estilos para los elemntos con clases loadingIcon
+Establece tamaño de fuente y margen inferior*/
+.loadingIcon {
+    font-size: 50px;
+    margin-bottom: 250px;
+}
+
+/* Define la animación llamada spin. 
+Estado inicial de la animación, el spinner está rotado 0 grados.
+Estado final de la animación, el spinner realiza una vuelta completa (360 grados).*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos para el encabezado de la sección de publicaciones.
+Los elementos se muestran en línea y se centran tanto horizontal como verticalmente en su contenedor.
+Establece un ancho y un margen superior*/
+.postsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2.5rem;
+    color:white;
+}
+
+/* Estilos para la sección de búsqueda.
+Establecen el tamaño de fuente y el peso de la fuente.
+Establece el color del texto.
+Los elementos se muestran como elementos en línea y se centran tanto horizontal como verticalmente en su contenedor.
+Establece un ancho y un margen superior así como un espaciado entre elementos.*/
+.searchHeader {
+    font-size: larger;
+    font-weight: 500;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0rem;
+    gap: 1rem;
+}
+
+/*  Estilos para el campo de entrada de búsqueda.
+Establece el ancho y la altura del campo de entrada.
+Establece el peso de la fuente en negrita.
+Establece el cursor del mouse como apuntador cuando pasa sobre el campo de entrada.*/
+.searchHeader > input {
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para el marcador de posición del campo de entrada de búsqueda.
+Establece el tamaño de fuente y el peso de la fuente del marcador de posición.
+Establece el color del marcador de posición.*/
+.searchHeader > input::placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(185, 182, 182);
+}
+
+/* Estilos para el campo de entrada de búsqueda cuando está enfocado.
+ Agrega una sombra cuando el campo de entrada está enfocado.
+Cambia el color de fondo del campo de entrada y el color del texto del campo de entrada cuando está enfocado*/
+.searchHeader > input:focus {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Estilos para el contenedor que alberga las publicaciones.
+Establece la altura y el ancho al.
+Centra el contenido horizontalmente dentro del contenedor.
+Los elementos se muestran como elementos en línea y se envuelven a la siguiente fila cuando no caben en la actual.
+Agrega un espacio entre elementos.*/
+.wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+/* Estilos para los encabezados dentro del contenedor.
+Establece el texto en el centro horizontalmente.*/
+.wrapper > h3 {
+    text-align: center;
+}
+
+/* Estilos para la notificación de consentimiento de cookies.
+Los elementos dentro de esta sección se centran tanto horizontal como verticalmente.*/
+.cookieConsent {
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para los botones dentro de elementos con la clase .container.
+Elimina el contorno predeterminado al hacer clic en el botón.
+Añade espaciado interno del botón.
+Establece un borde solido de color, tamaño de fuente, estilo de fuente, color de fondo y del texto del botón.
+Establece el cursor como un puntero al pasar sobre el botón y aplica una transición suave a propiedades cambiantes.*/
+.container button {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #b0aeae;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #161616;
+    color: #b0aeae;
+    cursor: pointer;
+    
+}
+
+/* Estilo de los Botones en el Estado Hover:
+Cambia el color de fondo, agrega una sombra al botón y cambia el color del texto*/
+.container button:hover {
+    background-color: aliceblue;
+    box-shadow: 1px 2px 5px 3px rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+/* Estilo de los Botones en el Estado Deshabilitado:
+Cambia el color del texto y el cursor a "no permitido" cuando está deshabilitado.*/
+.container button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Aplica estilos a la sección de blogs.
+Establece la altura y el ancho.
+Centra el contenedor horizontalmente como un contenedor flexible.
+Permite que los elementos dentro se envuelvan a la siguiente línea si no hay suficiente espacio horizontal.
+Establece un espacio entre los elementos y centra los elementos horizontalmente.*/
+.blogContainer {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+/*  Aplica estilos al contenedor de paginación.
+Establece el contenedor como un contenedor flexible.
+Centra los elementos horizontalmente.
+Establece un espacio entre los elementos y agrega un margen superior .*/
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,112 @@
+/* Se establece como un contenedor flexible que abarca toda la anchura de su elemento principal.
+Se aplica una transición para un efecto suave.
+Tiene un borde redondeado.
+Establece la altura y el ancho, el color de fondo.
+Tiene un margen en la parte superior y se centra horizontalmente.*/
+.container {
+    display: flex;
+    /* max-width: 100%; */
+    transition: 150ms;
+    border-radius: 12px;
+    height: 600px;
+    width: 365px;
+    background-color: #161616;
+    margin-top: 2rem;
+    /*  margin-left: auto;
+        margin-right: auto; */
+    transition: 2s;
+}
+
+/* Al pasar el cursor sobre él contenedor se le aplica una ligera sombra.*/
+.container:hover {
+    box-shadow: 1px 2px 5px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Contiene el contenido de la tarjeta del blog.
+Establece un relleno, una altura y ancho y usa un diseño de columna */
+.wrapper {
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Las imágenes dentro de la tarjeta del blog se ajustan para encajar en su contenedor.
+Se les aplica un borde redondeado con un radio de 20px.*/
+.wrapper > .imgContainer > img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-top: 0.75rem;
+    cursor: pointer;
+    transition: 2s;
+}
+
+/* Al pasar el cursor sobre la imagen, se amplía ligeramente*/
+.wrapper > .imgContainer > img:hover {
+    transform: scale(1.05);
+}
+
+/* Contiene los elementos de datos del blog y utiliza un diseño flexible para organizarlos.
+Los elementos se distribuyen de manera uniforme entre el inicio y el final del contenedor horizontalmente */
+.blogData {
+    margin-left: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Se aplica a los títulos de los blogs en la parte izquierda.
+Establece un tamaño de fuente y un estilo de fuente en negrita.
+Tiene márgenes superiores e inferiores para separar el título de otros elementos.*/
+.blogData > .left > h3 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Estiliza el párrafo de descripción del blog con un colo*/
+.blogData > .left > p {
+    color: #b0aeae;
+    line-height: 2;
+}
+
+/* Establece un margen superior, un tamaño de fuente y un color de texto a las etiquetas h2*/
+.blogData > .left > h2 {
+    margin-top: 2rem;
+    font-size: 15px;
+    color: #d4d2d2;
+}
+
+/* Estilos para la clase category, color de texto, relleno, ubicación, borde y tamaño de letra*/
+.category {
+    color:white;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    border: 2px solid rgb(62, 119, 252);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* Estiliza la sección de "me gusta" del blog en la parte derecha.
+Define un tamaño de fuente y un estilo de cursor para indicar que se puede hacer clic.
+Utiliza un diseño flexible para organizar los elementos, con un margen superior y derecho y un espacio entre elementos*/
+.blogData > .right {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+    gap: 0.5rem;
+    transition: 1s;
+}
+
+/* Cuando el cursor se sitúa sobre la sección de "me gusta", se aplica un efecto de escala y el color del texto cambia*/
+.blogData > .right:hover {
+    transform: scale(1.4);
+    color: aquamarine;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Esta clase define el contenedor principal del comentario y el alto y el ancho .*/
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+/*  Esta clase se aplica al contenedor que rodea todo el comentario. 
+Define el ancho, alto y márgenes. 
+Utiliza flexbox para alinear elementos horizontalmente (espacio entre ellos) y verticalmente (centrado verticalmente)*/
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Se aplica al lado izquierdo del comentario. 
+Utiliza flexbox para organizar estos elementos horizontalmente con un espaciado entre ellos.*/
+.left {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+/* Estiliza la imagen del avatar con un ancho y alto , asegurándose de que su contenido se ajuste y redondeándolo con un borde */
+.left>img {
+    width: 100%;
+    height: 100%;
+    max-height: 40px;
+    max-width: 40px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+/* Estiliza el contenedor de los datos del usuario.
+ Estos elementos se colocan en una columna y se alinean a la izquierda con un espaciado entre ellos.*/
+.left>.userData {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.25rem;
+}
+
+/* Aplica estilos a la marca de tiempo del comentario, como el tamaño de fuente y el color.*/
+.timeago {
+    font-size: 12px;
+    background-color: #121212;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.comment {
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: #121212; /* Color de fondo */
+    color: #c7c5c5; /* Color del texto */
+}
+
+/* Estiliza el ícono de papelera (para eliminar el comentario). Define un cursor de tipo "pointer" para indicar que es interactivo, establece un tamaño de fuente mayor y agrega un margen.*/
+.trashIcon {
+    cursor: pointer;
+    font-size: larger;
+    margin-right: 10px;
+    transition: transform 1s;
+}
+
+/*  Define los estilos cuando el ícono de papelera se encuentra en estado de "hover" (cuando el mouse pasa por encima). Hace que el ícono se agrande y cambia su color.*/
+.trashIcon:hover {
+   transform: scale(1.4);
+   color: crimson;
+}
